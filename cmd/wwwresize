@@ -1,0 +1,7 @@
+echo "\$# = $#"
+echo "\$0 = $0"
+echo "\$1 = $1"
+echo "convert /var/www/capture/usb/$1 -resize 162x122 /var/www/capture/usb/preview-$1"
+convert /var/www/capture/usb/$1 -resize 162x122 /var/www/capture/usb/preview-$1
+convert /var/www/capture/usb/$1 -resize 640x480 /var/www/capture/usb/fbi-$1
+

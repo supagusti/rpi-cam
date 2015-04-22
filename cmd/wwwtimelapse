@@ -1,0 +1,13 @@
+ROLL=$1
+SAVEDIR=/var/www/capture/usb/$ROLL
+check=`head -n 1 /var/www/capture/usb/tlstatus`
+
+while [ $check = "1"  ]; do
+
+filename=$ROLL-$(date -u +"%Y%m%d_%H%M%S").jpg
+/opt/vc/bin/raspistill -w 1920 -h 1080 -q 75 -o $SAVEDIR/$filename
+sleep $2;
+check=`head -n 1 /var/www/capture/usb/tlstatus`
+echo $SAVEDIR/$filename
+
+done;

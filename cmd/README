@@ -1,0 +1,3 @@
+
+# To work, the files in the /cmd/ directory must have the sticky bit enabled. To to this run the following command in the shell:
+# sudo chmod a+s <filename>
